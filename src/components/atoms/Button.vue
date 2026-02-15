@@ -37,9 +37,9 @@ const baseClasses = 'rounded-lg transition-colors focus:outline-none focus:ring-
 const variantClasses = computed(() => {
   switch (props.variant) {
     case 'primary':
-      return 'bg-primary text-white hover:bg-primary-light focus:ring-primary';
+      return 'bg-primary text-white hover:bg-primary-dark focus:ring-primary';
     case 'secondary':
-      return 'bg-secondary text-white hover:bg-secondary-light focus:ring-secondary';
+      return 'bg-secondary text-white hover:bg-secondary-dark focus:ring-secondary';
     case 'success':
       return 'bg-success text-white hover:bg-opacity-90 focus:ring-success';
     case 'warning':
@@ -47,9 +47,9 @@ const variantClasses = computed(() => {
     case 'danger':
       return 'bg-danger text-white hover:bg-opacity-90 focus:ring-danger';
     case 'ghost':
-      return 'bg-transparent text-text-primary hover:bg-surface focus:ring-surface';
+      return 'bg-transparent text-text-primary hover:bg-surface border border-border focus:ring-primary';
     default:
-      return 'bg-primary text-white hover:bg-primary-light focus:ring-primary';
+      return 'bg-primary text-white hover:bg-primary-dark focus:ring-primary';
   }
 });
 

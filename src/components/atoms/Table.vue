@@ -26,7 +26,7 @@ const props = defineProps({
   }
 });
 
-const baseClasses = 'min-w-full divide-y divide-border';
+const baseClasses = 'min-w-full divide-y divide-border border border-border rounded-lg';
 
 const variantClasses = computed(() => {
   switch (props.variant) {

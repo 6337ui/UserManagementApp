@@ -37,7 +37,7 @@ const baseClasses = '';
 const variantClasses = computed(() => {
   switch (props.variant) {
     case 'default':
-      return 'bg-transparent text-text-primary';
+      return 'bg-transparent text-text-primary border border-transparent';
     case 'primary':
       return 'bg-primary text-white';
     case 'secondary':
@@ -49,11 +49,11 @@ const variantClasses = computed(() => {
     case 'danger':
       return 'bg-danger text-white';
     case 'background':
-      return 'bg-background text-text-primary';
+      return 'bg-background text-text-primary border border-border';
     case 'surface':
-      return 'bg-surface text-text-primary';
+      return 'bg-surface text-text-primary border border-border';
     default:
-      return 'bg-transparent text-text-primary';
+      return 'bg-transparent text-text-primary border border-transparent';
   }
 });
 

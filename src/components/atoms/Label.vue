@@ -26,7 +26,7 @@ const props = defineProps({
   }
 });
 
-const baseClasses = 'font-medium';
+const baseClasses = 'font-medium text-text-primary';
 
 const sizeClasses = computed(() => {
   switch (props.size) {
