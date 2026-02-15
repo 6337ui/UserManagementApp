@@ -1,43 +1,48 @@
 <template>
-  <div class="mt-6 overflow-x-auto">
-    <table class="min-w-full">
-      <thead>
-      <TableElement tag="tr">
-        <TableElement tag="th">Номер</TableElement>
-        <TableElement tag="th">ФИО</TableElement>
-        <TableElement tag="th">Компания</TableElement>
-        <TableElement tag="th">Группа</TableElement>
-        <TableElement tag="th">Присутствие</TableElement>
-      </TableElement>
-      </thead>
-      <tbody>
-      <TableElement
+  <Container variant="default" :customClasses="'mt-6 overflow-x-auto'">
+    <Table variant="default">
+      <Thead>
+        <Tr>
+          <Th>Номер</Th>
+          <Th>ФИО</Th>
+          <Th>Компания</Th>
+          <Th>Группа</Th>
+          <Th>Присутствие</Th>
+        </Tr>
+      </Thead>
+      <Tbody>
+        <Tr
           v-for="(row, index) in filteredData"
           :key="index"
-          tag="tr"
+          variant="hoverable"
           @click="openEditModal(row)"
-          class="cursor-pointer hover:bg-gray-100 transition-colors"
-      >
-        <TableElement tag="td">{{ row.number }}</TableElement>
-        <TableElement tag="td">{{ row.name }}</TableElement>
-        <TableElement tag="td">{{ row.company }}</TableElement>
-        <TableElement tag="td">{{ row.group }}</TableElement>
-        <TableElement tag="td">
+        >
+          <Td>{{ row.number }}</Td>
+          <Td>{{ row.name }}</Td>
+          <Td>{{ row.company }}</Td>
+          <Td>{{ row.group }}</Td>
+          <Td>
             <span :class="presenceClass(row.presence)">
               {{ row.presence ? 'Присутствует' : 'Отсутствует' }}
             </span>
-        </TableElement>
-      </TableElement>
-      </tbody>
-    </table>
-  </div>
+          </Td>
+        </Tr>
+      </Tbody>
+    </Table>
+  </Container>
 </template>
 
 <script setup>
 import { computed } from 'vue';
 import { useVisitorsStore } from '@/stores/visitorsStores.js';
 import { storeToRefs } from 'pinia';
-import TableElement from '@/components/composables/tableElement.vue';
+import Table from '@/components/atoms/Table.vue';
+import Thead from '@/components/atoms/Thead.vue';
+import Tbody from '@/components/atoms/Tbody.vue';
+import Tr from '@/components/atoms/Tr.vue';
+import Th from '@/components/atoms/Th.vue';
+import Td from '@/components/atoms/Td.vue';
+import Container from '@/components/atoms/Container.vue';
 
 const visitorsStore = useVisitorsStore();
 const { tableData, selectedFilter, searchQuery } = storeToRefs(visitorsStore);
@@ -54,7 +59,7 @@ const filteredData = computed(() =>
 );
 
 const presenceClass = (presence) =>
-    presence ? 'text-green-500 font-medium' : 'text-red-500 font-medium';
+    presence ? 'text-success font-medium' : 'text-danger font-medium';
 
 const openEditModal = (user) => {
   visitorsStore.openPopup(user);

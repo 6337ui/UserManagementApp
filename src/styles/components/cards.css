@@ -1,0 +1,50 @@
+/**
+ * Card component styles
+ */
+
+.card {
+  @apply bg-surface rounded-lg shadow-md overflow-hidden;
+}
+
+.card-header {
+  @apply px-6 py-4 border-b border-border;
+}
+
+.card-title {
+  @apply text-xl font-semibold text-text-primary;
+}
+
+.card-subtitle {
+  @apply text-text-secondary;
+}
+
+.card-body {
+  @apply p-6;
+}
+
+.card-footer {
+  @apply px-6 py-4 bg-gray-50 border-t border-border;
+}
+
+/* Card size variants */
+.card-sm {
+  @apply p-4;
+}
+
+.card-lg {
+  @apply p-8;
+}
+
+/* Card with image */
+.card-img-top {
+  @apply w-full h-48 object-cover;
+}
+
+.card-img-bottom {
+  @apply w-full h-48 object-cover;
+}
+
+/* Card groups */
+.card-group {
+  @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6;
+}

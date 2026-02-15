@@ -1,0 +1,54 @@
+/**
+ * Button component styles
+ */
+
+.btn-primary {
+  @apply bg-primary text-white hover:bg-primary-light active:bg-primary-dark;
+}
+
+.btn-secondary {
+  @apply bg-secondary text-white hover:bg-secondary-light active:bg-secondary-dark;
+}
+
+.btn-success {
+  @apply bg-success text-white hover:bg-success-light active:bg-success-dark;
+}
+
+.btn-warning {
+  @apply bg-warning text-white hover:bg-warning-light active:bg-warning-dark;
+}
+
+.btn-danger {
+  @apply bg-danger text-white hover:bg-danger-light active:bg-danger-dark;
+}
+
+/* Button size variants */
+.btn-sm {
+  @apply py-1 px-2 text-sm;
+}
+
+.btn-base {
+  @apply py-2 px-4;
+}
+
+.btn-lg {
+  @apply py-3 px-6 text-lg;
+}
+
+/* Button with icon */
+.btn-icon {
+  @apply inline-flex items-center gap-2;
+}
+
+/* Button group */
+.btn-group {
+  @apply inline-flex rounded-md shadow-sm;
+}
+
+.btn-group > *:not(:last-child) {
+  @apply rounded-r-none border-r-0;
+}
+
+.btn-group > *:not(:first-child) {
+  @apply rounded-l-none;
+}

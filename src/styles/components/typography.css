@@ -1,0 +1,103 @@
+/**
+ * Typography component styles
+ */
+
+.text-display-1 {
+  @apply text-5xl font-bold leading-tight;
+}
+
+.text-display-2 {
+  @apply text-4xl font-bold leading-tight;
+}
+
+.text-heading-1 {
+  @apply text-3xl font-bold;
+}
+
+.text-heading-2 {
+  @apply text-2xl font-bold;
+}
+
+.text-heading-3 {
+  @apply text-xl font-bold;
+}
+
+.text-body-lg {
+  @apply text-lg;
+}
+
+.text-body-md {
+  @apply text-base;
+}
+
+.text-body-sm {
+  @apply text-sm;
+}
+
+.text-caption {
+  @apply text-sm text-text-secondary;
+}
+
+.text-overline {
+  @apply text-xs font-semibold uppercase tracking-wider text-text-secondary;
+}
+
+/* Text alignment */
+.text-left {
+  @apply text-left;
+}
+
+.text-center {
+  @apply text-center;
+}
+
+.text-right {
+  @apply text-right;
+}
+
+/* Text weights */
+.text-thin {
+  @apply font-thin;
+}
+
+.text-light {
+  @apply font-light;
+}
+
+.text-normal {
+  @apply font-normal;
+}
+
+.text-medium {
+  @apply font-medium;
+}
+
+.text-semibold {
+  @apply font-semibold;
+}
+
+.text-bold {
+  @apply font-bold;
+}
+
+/* Text transform */
+.text-uppercase {
+  @apply uppercase;
+}
+
+.text-lowercase {
+  @apply lowercase;
+}
+
+.text-capitalize {
+  @apply capitalize;
+}
+
+/* Text decoration */
+.text-underline {
+  @apply underline;
+}
+
+.text-line-through {
+  @apply line-through;
+}

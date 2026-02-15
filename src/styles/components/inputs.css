@@ -1,0 +1,47 @@
+/**
+ * Form input component styles
+ */
+
+.input {
+  @apply px-4 py-2 rounded-lg shadow-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent;
+}
+
+.input-lg {
+  @apply py-3 px-4 text-lg;
+}
+
+.input-sm {
+  @apply py-1 px-2 text-sm;
+}
+
+.input-error {
+  @apply focus:ring-danger border-danger;
+}
+
+.input-success {
+  @apply focus:ring-success border-success;
+}
+
+/* Label styles */
+.label {
+  @apply block text-text-primary font-medium mb-1;
+}
+
+.label-sm {
+  @apply text-sm;
+}
+
+.label-required::after {
+  content: " *";
+  @apply text-danger;
+}
+
+/* Checkbox and radio */
+.checkbox, .radio {
+  @apply h-5 w-5 rounded border-gray-300 text-primary focus:ring-primary;
+}
+
+/* Select dropdown */
+.select {
+  @apply block w-full pl-3 pr-10 py-2 text-base border-gray-300 focus:outline-none focus:ring-primary focus:border-primary rounded-md;
+}

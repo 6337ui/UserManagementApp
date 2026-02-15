@@ -1,0 +1,55 @@
+/**
+ * Table component styles
+ */
+
+.table {
+  @apply min-w-full divide-y divide-gray-200;
+}
+
+.table-header {
+  @apply bg-gray-50;
+}
+
+.table-header-cell {
+  @apply py-3 px-4 text-xs font-semibold text-text-secondary text-left uppercase tracking-wider;
+}
+
+.table-body {
+  @apply bg-white divide-y divide-gray-200;
+}
+
+.table-row {
+  @apply hover:bg-gray-50 transition-colors;
+}
+
+.table-cell {
+  @apply py-3 px-4 text-sm text-text-primary;
+}
+
+.table-cell-center {
+  @apply text-center;
+}
+
+.table-cell-right {
+  @apply text-right;
+}
+
+/* Striped table rows */
+.table-striped > tbody > tr:nth-of-type(odd) {
+  @apply bg-gray-50;
+}
+
+/* Bordered table */
+.table-bordered {
+  @apply border border-gray-200;
+}
+
+.table-bordered th,
+.table-bordered td {
+  @apply border border-gray-200;
+}
+
+/* Responsive table wrapper */
+.table-responsive {
+  @apply overflow-x-auto;
+}

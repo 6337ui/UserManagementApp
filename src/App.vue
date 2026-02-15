@@ -2,7 +2,7 @@
 import Header from '@/components/header.vue';
 import Table from '@/components/table.vue'
 import Footer from '@/components/footer.vue'
-import Popup from '@/components/composables/addUserPopup.vue'
+import Popup from '@/components/molecules/AddUserPopup.vue'
 </script>
 
 <template>

@@ -1,0 +1,91 @@
+/**
+ * Animation component styles
+ */
+
+/* Fade animations */
+.fade-in {
+  @apply transition-opacity duration-300 ease-in opacity-0;
+}
+
+.fade-in.visible {
+  @apply opacity-100;
+}
+
+.fade-out {
+  @apply transition-opacity duration-300 ease-out opacity-100;
+}
+
+.fade-out.hidden {
+  @apply opacity-0;
+}
+
+/* Slide animations */
+.slide-up {
+  @apply transition-transform duration-300 ease-in transform translate-y-0;
+}
+
+.slide-up.hidden {
+  @apply translate-y-4;
+}
+
+.slide-down {
+  @apply transition-transform duration-300 ease-out transform translate-y-4;
+}
+
+.slide-down.visible {
+  @apply translate-y-0;
+}
+
+/* Scale animations */
+.scale-in {
+  @apply transition-transform duration-300 ease-in transform scale-95;
+}
+
+.scale-in.visible {
+  @apply scale-100;
+}
+
+.scale-out {
+  @apply transition-transform duration-300 ease-out transform scale-100;
+}
+
+.scale-out.hidden {
+  @apply scale-95;
+}
+
+/* Bounce animations */
+.bounce-in {
+  @apply animate-bounce;
+}
+
+/* Pulse animations */
+.pulse {
+  @apply animate-pulse;
+}
+
+.pulse-slow {
+  @apply animate-pulse-slow;
+}
+
+/* Spin animations */
+.spin {
+  @apply animate-spin;
+}
+
+/* Keyframes for custom animations */
+@keyframes pulse-slow {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+@layer utilities {
+  @variants responsive {
+    .animate-pulse-slow {
+      animation: pulse-slow 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+    }
+  }
+}

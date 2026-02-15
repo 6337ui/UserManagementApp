@@ -1,6 +1,8 @@
 <script setup>
 import { computed } from 'vue';
 import { useVisitorsStore } from '@/stores/visitorsStores.js';
+import Button from '@/components/atoms/Button.vue';
+import Container from '@/components/atoms/Container.vue';
 
 const visitorsStore = useVisitorsStore();
 const filters = computed(() => visitorsStore.filters);
@@ -9,13 +11,12 @@ const selectedFilter = computed({
   get: () => visitorsStore.selectedFilter,
   set: (value) => visitorsStore.setSelectedFilter(value),
 });
-
 </script>
 
 <template>
-  <footer class="p-4 flex items-center">
+  <Container variant="default" :customClasses="'p-4 flex items-center'">
     <h1 class="text-lg font-bold mr-5">Фильтровать по:</h1>
-    <div class="flex flex-wrap gap-2">
+    <Container variant="default" :customClasses="'flex flex-wrap gap-2'">
       <label
           v-for="filter in filters"
           :key="filter"
@@ -28,17 +29,15 @@ const selectedFilter = computed({
             class="absolute opacity-0 w-0 h-0"
             aria-label="Select filter: {{ filter }}"
         />
-        <span
-            :class="[
-              'px-4 py-2 rounded-lg text-sm cursor-pointer transition-colors',
-              selectedFilter === filter
-                ? 'bg-gray-500 text-white'
-                : 'text-black hover:bg-gray-500 hover:text-white'
-            ]"
+        <Button
+            :variant="selectedFilter === filter ? 'secondary' : 'ghost'"
+            size="md"
+            :customClasses="'text-sm'"
+            @click="selectedFilter = filter"
         >
           {{ filter }}
-        </span>
+        </Button>
       </label>
-    </div>
-  </footer>
+    </Container>
+  </Container>
 </template>

@@ -1,0 +1,73 @@
+/**
+ * Form component styles
+ */
+
+.form {
+  @apply space-y-6;
+}
+
+.form-group {
+  @apply mb-4;
+}
+
+.form-label {
+  @apply block text-text-primary font-medium mb-1;
+}
+
+.form-label-required::after {
+  content: " *";
+  @apply text-danger;
+}
+
+.form-control {
+  @apply block w-full rounded-lg border-gray-300 shadow-sm focus:border-primary focus:ring focus:ring-primary focus:ring-opacity-50;
+}
+
+.form-textarea {
+  @apply min-h-[100px];
+}
+
+.form-select {
+  @apply block w-full rounded-lg border-gray-300 shadow-sm focus:border-primary focus:ring focus:ring-primary;
+}
+
+.form-check {
+  @apply flex items-start;
+}
+
+.form-check-input {
+  @apply h-4 w-4 mt-0.5 rounded border-gray-300 text-primary focus:ring-primary;
+}
+
+.form-check-label {
+  @apply ml-2 text-text-primary;
+}
+
+.form-inline {
+  @apply flex items-center space-x-2;
+}
+
+.form-actions {
+  @apply flex justify-end space-x-3 pt-4;
+}
+
+/* Validation states */
+.form-control-success {
+  @apply border-success focus:ring-success focus:border-success;
+}
+
+.form-control-error {
+  @apply border-danger focus:ring-danger focus:border-danger;
+}
+
+.form-feedback {
+  @apply mt-1 text-sm text-text-secondary;
+}
+
+.form-feedback-success {
+  @apply text-success;
+}
+
+.form-feedback-error {
+  @apply text-danger;
+}
