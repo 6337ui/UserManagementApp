@@ -4,7 +4,7 @@
     variant="default"
     :customClasses="'z-10 fixed inset-0 bg-black/30 flex justify-center items-center'"
   >
-    <Container variant="surface" size="lg" :customClasses="'w-[1461px] rounded-lg shadow-lg relative'">
+    <Container variant="surface" :customClasses="'w-[1461px] rounded-lg shadow-lg relative'">
       <Button
         variant="secondary"
         size="sm"
@@ -22,7 +22,7 @@
       <h2 class="text-xl font-bold mb-6 text-center text-text-primary">{{ isEditMode ? 'Редактировать пользователя' : 'Добавить пользователя' }}</h2>
       <form @submit.prevent="handleSubmit" class="space-y-4 text-text-primary">
         <div class="grid grid-cols-12 gap-x-4 gap-y-4 self-auto">
-          <Label size="lg" :customClasses="labelClasses">ФИО</Label>
+          <Label :customClasses="labelClasses">ФИО</Label>
           <Input
             v-model="formData.name"
             type="text"
@@ -32,7 +32,7 @@
             required
           />
 
-          <Label size="lg" :customClasses="labelClasses">Компания</Label>
+          <Label :customClasses="labelClasses">Компания</Label>
           <Input
             v-model="formData.company"
             type="text"
@@ -42,7 +42,7 @@
             required
           />
 
-          <Label size="lg" :customClasses="labelClasses">Группа</Label>
+          <Label :customClasses="labelClasses">Группа</Label>
           <Select
             v-model="formData.group"
             variant="default"
@@ -59,7 +59,7 @@
             <option value="Группа Е">Группа Е</option>
           </Select>
 
-          <Label size="lg" :customClasses="labelClasses">Присутствие</Label>
+          <Label :customClasses="labelClasses">Присутствие</Label>
           <input type="checkbox" v-model="formData.presence" :class="checkboxClasses" />
 
           <Button

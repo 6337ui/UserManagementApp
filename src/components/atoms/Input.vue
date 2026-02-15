@@ -52,20 +52,20 @@ const model = computed({
   set: (value) => emits('update:modelValue', value)
 });
 
-const baseClasses = 'rounded-lg shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2 w-full';
+const baseClasses = 'rounded-lg shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2 w-full border-2';
 
 const variantClasses = computed(() => {
   switch (props.variant) {
     case 'default':
-      return 'bg-surface text-text-primary border border-border focus:border-primary focus:ring-primary';
+      return 'bg-surface text-text-primary border-border focus:border-primary focus:ring-primary';
     case 'success':
-      return 'bg-surface text-text-primary border border-success focus:border-success focus:ring-success';
+      return 'bg-surface text-text-primary border-success focus:border-success focus:ring-success';
     case 'warning':
-      return 'bg-surface text-text-primary border border-warning focus:border-warning focus:ring-warning';
+      return 'bg-surface text-text-primary border-warning focus:border-warning focus:ring-warning';
     case 'danger':
-      return 'bg-surface text-text-primary border border-danger focus:border-danger focus:ring-danger';
+      return 'bg-surface text-text-primary border-danger focus:border-danger focus:ring-danger';
     default:
-      return 'bg-surface text-text-primary border border-border focus:border-primary focus:ring-primary';
+      return 'bg-surface text-text-primary border-border focus:border-primary focus:ring-primary';
   }
 });
 

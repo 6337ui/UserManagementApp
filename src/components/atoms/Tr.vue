@@ -31,9 +31,9 @@ const baseClasses = '';
 const variantClasses = computed(() => {
   switch (props.variant) {
     case 'hoverable':
-      return 'hover:bg-surface transition-colors cursor-pointer';
+      return 'hover:bg-surface transition-colors cursor-pointer border-b border-border';
     default:
-      return '';
+      return 'border-b border-border';
   }
 });
 </script>
